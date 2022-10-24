@@ -1,0 +1,8 @@
+ami_name                       = "apache-on-ubuntu"
+aws_ami_owner                  = "029687280754"
+instance_type                  = "t2.small"
+keypair                        = "talent-academy-ec2"
+aws_region                     = "eu-central-1"
+pub_subnet                     = "pub-subnet"
+vpc_name                       = "vpc"
+security_group_id              = "sg-03037c891429c02e5"
