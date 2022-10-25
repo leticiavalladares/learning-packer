@@ -1,5 +1,9 @@
+locals {
+   timestamp = regex_replace(timestamp(), "[-TZ:]", "")
+}
+
 source "amazon-ebs" "ubuntu" {
-    ami_name      = "apache-on-ubuntu"
+    ami_name      = "apache-on-ubuntu-${local.timestamp}"
     instance_type = var.instance_type
     region        = var.region
     source_ami    = data.amazon-ami.ubuntu.id      // ami-051835d754b74795c
